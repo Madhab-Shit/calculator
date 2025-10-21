@@ -10,7 +10,7 @@
 <body class="bg-black">
   <div class=" lg:w-[20%] lg:h-[63vh] lg:bg-red-500 m-[auto] lg:mt-[8%] rounded-2xl p-5 mt-[70%]">
     <div>
-      <div  class="w-[100%] h-[6vh] px-2 text-right text-2xl lg:bg-white rounded-[5px] overflow-x-auto text-white lg:text-black" placeholder="0" id="incal"></div>
+      <div  class="w-[100%] h-[6vh] px-2 text-right text-2xl lg:bg-white lg:text-black rounded-[5px] overflow-x-auto text-white" placeholder="0" id="incal"></div>
     </div>
     <div class="flex flex-wrap gap-2.5 mt-5 float-left">
       <div class="bg-amber-300 w-[22%] h-[8vh] text-3xl text-center  pt-4 lg:pt-2 rounded-2xl float-right mt-2"onclick="Celer()"id="Ac">AC</div>
@@ -50,12 +50,13 @@
     function calculator()
     { 
       let k=eval(c)
+      c=k
       document.getElementById('incal').innerHTML=k
     }
    
     function back()
     {
-      
+     c=c.toString() 
       b=""
       for(i=0;i<c.length-1;i++)
         b+=c[i]
